@@ -1,0 +1,139 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 106.3%;
+}
+
+body {
+    font-family: acumin-pro, sans-serif;
+    color: #2d2e2f;
+    margin: 0;
+}
+
+.app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0 2em;
+}
+
+.app__title span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #909197;
+    line-height: 0;
+}
+
+.app__title {
+    font-size: 2.3rem;
+    max-width: 14em;
+    line-height: 1.3em;
+    text-align: center;
+}
+
+.app__field {
+    display: block;
+    outline: none;
+    width: 19em;
+    height: 50px;
+    max-width: 100%;
+    font-weight: 600;
+    color: #4d4e4f;
+    font-size: 14px;
+    padding: 0 20px;
+    border: 3px solid #2d2e2f;
+    border-radius: 100px;
+}
+
+.app__field:focus {
+    border-color: #655efe;
+}
+
+.app__field::placeholder {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.app__alert {
+    display: none;
+}
+
+.show-alert {
+    display: block;
+    color: #bf564a;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+.app__button {
+    font-family: acumin-pro, sans-serif;
+    cursor: pointer;
+    outline: none;
+    letter-spacing: .03em;
+    margin: 1em 0;
+    padding: 0 20px;
+    background-color: #655efe;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 48px;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+}
+
+.app__button:active {
+    box-shadow: 0 0 0 1px #655efe;
+}
+
+.modal {
+    border: none;
+    padding: 0.5em;
+    border-radius: 9px;
+}
+
+.modal::backdrop {
+    background-color: rgba(95, 97, 106, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.modal-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 2em 1em 1em;
+}
+
+.modal__close {
+    line-height: 0;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    right: 11px;
+    top: 17px;
+    font-size: 30px;
+    color: #909197;
+}
+
+.modal__close:hover {
+    color: #2d2e2f;
+}
+
+.modal__illustration {
+    align-self: center;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.modal__result {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.result {
+    color: #655efe;
+}
