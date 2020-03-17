@@ -7,8 +7,8 @@ const globalRe = /^((\d*\.)?\d+|(\d*\s*?\,\s*)?\d+|(\d*\,)?\d+)+$/igm;
 function validate() {
     if(input.value == '') {
         alert.innerHTML = 'Please enter your numbers.';
-        alert.classList.add('show-alert');
-        input.style.borderColor = '#bf564a';
+        alert.classList.add('app__alert--show');
+        input.style.borderColor = '#e03227';
         input.focus();
         return false;
     }
@@ -17,8 +17,8 @@ function validate() {
 
     if(!localRe.test(input.value)) {
         alert.innerHTML = `You can't pull the wool over my eyes.`;
-        alert.classList.add('show-alert');
-        input.style.borderColor = '#bf564a';
+        alert.classList.add('app__alert--show');
+        input.style.borderColor = '#e03227';
         input.focus();
         return false;
     }
@@ -40,10 +40,11 @@ function validate() {
 
 closeModal.addEventListener('click', function() {
     modal.close();
+    input.value = '';
 });
 
 function remove() {
-    alert.classList.remove('show-alert');
+    alert.classList.remove('app__alert--show');
     input.removeAttribute('style');
 }
 
