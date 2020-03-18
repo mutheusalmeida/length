@@ -4,6 +4,10 @@ const modal = document.getElementById('modal');
 const closeModal = document.getElementById('closeModal');
 const globalRe = /^((\d*\.)?\d+|(\d*\s*?\,\s*)?\d+|(\d*\,)?\d+)+$/igm;
 
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js');
+}
+
 function validate() {
     if(input.value == '') {
         alert.innerHTML = 'Please enter your numbers.';
